@@ -6,14 +6,13 @@
 /*   By: amanasse <amanasse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 12:17:59 by amanasse          #+#    #+#             */
-/*   Updated: 2022/05/31 12:18:23 by amanasse         ###   ########.fr       */
+/*   Updated: 2022/05/31 16:03:24 by amanasse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "ft_printf.h"
-# include "libft/libft.h"
+#include "ft_printf.h"
 
-size_t	ft_strlen(const char *s)
+int	ft_strlen(char *s)
 {
 	int	i;
 

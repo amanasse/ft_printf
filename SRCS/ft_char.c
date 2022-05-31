@@ -6,14 +6,13 @@
 /*   By: amanasse <amanasse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 12:12:26 by amanasse          #+#    #+#             */
-/*   Updated: 2022/05/31 12:12:48 by amanasse         ###   ########.fr       */
+/*   Updated: 2022/05/31 19:26:18 by amanasse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "ft_printf.h"
-# include "libft/libft.h"
+#include "ft_printf.h"
 
-int ft_char(int c)
+int	ft_char(int c)
 {
 	write (1, &c, 1);
 	return (1);

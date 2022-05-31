@@ -6,20 +6,19 @@
 /*   By: amanasse <amanasse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 12:10:33 by amanasse          #+#    #+#             */
-/*   Updated: 2022/05/31 12:10:48 by amanasse         ###   ########.fr       */
+/*   Updated: 2022/05/31 19:08:08 by amanasse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "ft_printf.h"
-# include "libft/libft.h"
+#include "ft_printf.h"
 
 int	ft_putnbr_d_i(int n)
 {
-	int i;
+	int	i;
 	int	ok;
 
 	ok = 0;
-	i = count(n);
+	i = count_nb(n);
 	if (n < 0)
 	{
 		n *= -1;
