@@ -6,7 +6,7 @@
 /*   By: amanasse <amanasse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 12:15:00 by amanasse          #+#    #+#             */
-/*   Updated: 2022/05/31 19:22:53 by amanasse         ###   ########.fr       */
+/*   Updated: 2022/06/01 15:06:02 by amanasse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,23 +26,6 @@ int	count_nb(int nb)
 		nb = -nb;
 		n++;
 	}
-	while (nb > 9)
-	{
-		nb = nb / 10;
-		n++;
-	}
-	if (nb > 0 && nb < 10)
-		n++;
-	return (n);
-}
-
-unsigned int	count_u(unsigned int nb)
-{
-	unsigned int	n;
-
-	n = 0;
-	if (nb == 0)
-		return (1);
 	while (nb > 9)
 	{
 		nb = nb / 10;

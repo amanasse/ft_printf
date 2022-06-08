@@ -6,7 +6,7 @@
 /*   By: amanasse <amanasse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 13:30:00 by amanasse          #+#    #+#             */
-/*   Updated: 2022/05/31 19:25:49 by amanasse         ###   ########.fr       */
+/*   Updated: 2022/06/02 18:11:30 by amanasse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 int	ft_check_char_p(char c, va_list *ap)
 {	
-	long unsigned int	tmp;
+	unsigned long long	tmp;
 	int					count;
 
 	count = 0;
 	if (c == 'p')
 	{
-		tmp = (long unsigned int)va_arg(*ap, void *);
+		tmp = (unsigned long long)va_arg(*ap, void *);
 		if (tmp == 0)
 		{	
 			write (1, "(nil)", 5);
@@ -69,13 +69,13 @@ int	ft_check_char(char c, va_list *ap)
 	if (c == 'x')
 	{
 		tmp = va_arg(*ap, int);
-		count += count_hexa(tmp);
+		count += count_hexa_x_x(tmp);
 		ft_putnbr_base_x_x(tmp, "0123456789abcdef");
 	}
 	if (c == 'X')
 	{
 		tmp = va_arg(*ap, int);
-		count += count_hexa(tmp);
+		count += count_hexa_x_x(tmp);
 		ft_putnbr_base_x_x(tmp, "0123456789ABCDEF");
 	}
 	if (c == '%')

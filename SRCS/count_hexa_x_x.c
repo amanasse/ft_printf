@@ -1,46 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   count_hexa_x_x.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amanasse <amanasse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/04 16:30:33 by amanasse          #+#    #+#             */
-/*   Updated: 2022/05/12 10:36:13 by amanasse         ###   ########.fr       */
+/*   Created: 2022/06/02 18:06:07 by amanasse          #+#    #+#             */
+/*   Updated: 2022/06/02 18:11:28 by amanasse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-char	*ft_strchr(const char *s, int c)
+int	count_hexa_x_x(unsigned int nb)
 {
+	unsigned int	n;
 	int				i;
-	unsigned char	d;
 
+	n = nb;
 	i = 0;
-	if (!s)
-		return (NULL);
-	d = (unsigned char)c;
-	while (s[i] != '\0')
+	if (n == 0)
+		return (1);
+	while (n)
 	{
-		if (s[i] == d)
-			return ((char *)s + i);
+		n = n / 16;
 		i++;
 	}
-	if (d == 0)
-		return ((char *)s + i);
-	return (NULL);
+	return (i);
 }
-/*
-int main()
-{
-	char str[] = "Je suis la";
-	
-	int i = 105;
-	char c = 98;
-
-	printf("%s\n", ft_strchr(str, i));
-	printf("%s\n", strchr(str, i));
-	return (0);
-}
-*/

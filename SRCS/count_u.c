@@ -1,32 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   count_u.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amanasse <amanasse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/02 15:51:57 by amanasse          #+#    #+#             */
-/*   Updated: 2022/05/09 10:17:57 by amanasse         ###   ########.fr       */
+/*   Created: 2022/06/01 15:00:54 by amanasse          #+#    #+#             */
+/*   Updated: 2022/06/01 16:23:43 by amanasse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int	ft_isalnum(int c)
+unsigned int	count_u(unsigned int nb)
 {
-	if (c >= '0' && c <= '9')
-		return (1);
-	else if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
-		return (1);
-	return (0);
-}
-/*
-int main ()
-{
-	int c;
+	unsigned int	n;
 
-	c = 48;
-	printf("%d", ft_isalnum(c));
-	return (0);
+	n = 0;
+	if (nb == 0)
+		return (1);
+	while (nb > 9)
+	{
+		nb = nb / 10;
+		n++;
+	}
+	if (nb > 0 && nb < 10)
+		n++;
+	return (n);
 }
-*/

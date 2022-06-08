@@ -8,7 +8,9 @@ SRCS    = 	ft_strlen.c\
 			ft_putnbr_base.c\
 			ft_putnbr_d_i.c\
 			ft_putnbr_u.c\
-			ft_string.c
+			ft_string.c\
+			count_u.c\
+			count_hexa_x_x.c
 
 OBJS	= ${SRCS:.c=.o}
 HEADERS	= "ft_printf.h"
